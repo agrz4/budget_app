@@ -6,6 +6,7 @@ import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 import TotalBudgetCard from "./components/TotalBudgetCard";
 import { useState } from "react";
 import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetsContext";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 function App() {
   const [showAddBudgetModal, setShowAddBudgetModal] = useState(false);
@@ -21,6 +22,16 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <header className="container mx-auto px-4 py-4">
+        <div className="flex justify-end">
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div>
+      </header>
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-12">
           <h1 className="text-4xl font-bold text-gray-800 tracking-tight">Budget Tracker</h1>
