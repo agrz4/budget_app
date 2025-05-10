@@ -1,20 +1,19 @@
-@import "tailwindcss";
-
-:root {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+}
+
+.login-card {
+  background: linear-gradient(145deg, #ffffff, #f0f4f8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #4f92e9 0%, #5bb98c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Custom Scrollbar */
@@ -46,19 +45,4 @@ body {
 *:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-}
-
-/* Button Base Styles */
-button {
-  @apply transition-all duration-200 ease-in-out;
-}
-
-/* Input Base Styles */
-input, select, textarea {
-  @apply transition-all duration-200 ease-in-out;
-}
-
-/* Card Hover Effects */
-.card-hover {
-  @apply transition-all duration-200 ease-in-out hover:shadow-lg hover:scale-[1.02];
 }
